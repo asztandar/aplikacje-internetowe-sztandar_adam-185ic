@@ -1,5 +1,9 @@
+body{
+    background-image: url("../img/background.jpg");
+    color: white;
+}
 .page-header {
-    background-color: #C25100;
+    background-color: #278115;
     margin-top: 0;
     padding: 20px 20px 20px 40px;
 }
