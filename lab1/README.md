@@ -26,4 +26,4 @@ __Usuwanie posta__ - usunięcie posta po kliknięciu w przycisk.
 ![Usuń post](md_img/7.png)
 
 __Strona główna jak nie jesteśmy zalogowani__ - strona bloga wraz z wpisami bez logowania.
-![Strona Główna](md_img/8.png
+![Strona Główna logout](md_img/8.png
