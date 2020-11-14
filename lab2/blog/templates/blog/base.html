@@ -1,0 +1,56 @@
+{% load staticfiles %}
+<html>
+
+<head>
+    <title>Django Girls blog</title>
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="{% static 'css/blog.css' %}">
+    <script src="{% static 'js/scripts.js' %}"></script>
+    <link href="//fonts.googleapis.com/css?family=Lobster&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+    <header>
+        <div class="page-header">
+            <div class="logo">
+                <h1><a href="/">Django Girls Blog - Adam Sztandar</a></h1>
+            </div>
+            <div class="addButton">
+                {% if user.is_authenticated %}
+                <a href="{% url 'post_new' %}" class="top-menu"><span class="glyphicon glyphicon-plus"></span></a>
+                {% endif %}
+            </div>
+            <div class="menu" onclick="myFunction(this)">
+                <div class="container-navbar">
+                    <div class="bar1"></div>
+                    <div class="bar2"></div>
+                    <div class="bar3"></div>
+                </div>
+                <div class="menu-dropdown">
+                    {% if user.is_authenticated %}
+                    <a href="#">Wyloguj się</a>
+                    {% else %}
+                    <a href="#">Zaloguj się</a>
+                    <a href="#">Zarejestruj się</a>
+                    {% endif %}
+                </div>
+            </div>
+
+
+
+
+        </div>
+    </header>
+    <div class="content container">
+        <div class="row">
+            <div class="col-md-8">
+                {% block content %}
+                {% endblock %}
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
