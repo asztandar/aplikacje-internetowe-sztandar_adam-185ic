@@ -23,6 +23,7 @@ body{
 
 .content {
     margin-left: 40px;
+   
 }
 
 h1, h2, h3, h4 {
@@ -107,3 +108,22 @@ h1, h2, h3, h4 {
     margin-top: 10px;
   }
 
+
+  .register-content{ 
+    margin-left: auto;
+    margin-right: auto;
+    
+  }
+  .register-content-form form{
+    display: flex;
+    flex-direction: column; 
+    gap: 8px;
+  } 
+  .register-content-form input{
+    width: 200px;
+    color: black;
+  }
+
+  .login-content{
+    color:black;
+  }

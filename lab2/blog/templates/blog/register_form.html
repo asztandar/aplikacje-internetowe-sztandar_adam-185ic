@@ -1,0 +1,23 @@
+{% extends 'blog/base.html' %}
+
+{% block content %}
+    <div class="register-content">
+    <div class="register-content-form">
+        <form action="register" method="post">
+            {% csrf_token %}
+            <input type="text" name="first_name" placeholder="Podaj swoje imie">
+            <input type="text" name="last_name" placeholder="Podaj swoje nazwisko">
+            <input type="text" name="username" placeholder="Podaj nazwę użytkownika">
+            <input type="email" name="email" placeholder="Podaj adres e-mail">
+            <input type="text" name="password1" placeholder="Podaj hasło">
+            <input type="text" name="password2" placeholder="Powtórz hasło"> 
+            <input type="submit">
+        </form>
+    </div>
+    <div class="register-message">
+        {%for message in messages%}
+        <p>{{message}}</p>
+        {%endfor%}
+    </div>
+</div>
+{% endblock %}

@@ -2,6 +2,22 @@
 
 {% block content %}
     <div class="login-content">
+        <form action="login" method="POST">
+            {% csrf_token %}
+            <input type="text" name="username" placeholder="Podaj nazwę użytkownika">
+            <input type="password" name="password" placeholder="Podaj hasło">
+            <input type="submit">
+
+            
+
+
+        </form>
+
+        <div class="register-message">
+            {%for message in messages%}
+            <p>{{message}}</p>
+            {%endfor%}
+        </div>
         
     </div>
 {% endblock %}
