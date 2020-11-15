@@ -17,6 +17,11 @@
             <div class="logo">
                 <h1><a href="/">Django Girls Blog - Adam Sztandar</a></h1>
             </div>
+            <div class="user-name">
+                {% if user.is_authenticated %}
+                    {{ user.first_name }}
+                {% endif %}
+            </div>
             <div class="addButton">
                 {% if user.is_authenticated %}
                 <a href="{% url 'post_new' %}" class="top-menu"><span class="glyphicon glyphicon-plus"></span></a>
@@ -30,7 +35,7 @@
                 </div>
                 <div class="menu-dropdown">
                     {% if user.is_authenticated %}
-                    <a href="#">Wyloguj się</a>
+                    <a href="logout">Wyloguj się</a>
                     {% else %}
                     <a href="#">Zaloguj się</a>
                     <a href="#">Zarejestruj się</a>
