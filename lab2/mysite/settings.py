@@ -127,3 +127,5 @@ STATICFILES_DIRS = (
 )
 
 django_heroku.settings(locals())
+
+EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
