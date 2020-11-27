@@ -17,5 +17,6 @@ __Logowanie przez github__ -
 __Logowanie przez fb__ - 
 ![](md_img/4.png)
 ![](md_img/5.png)
+![](md_img/6.png)
 
 
