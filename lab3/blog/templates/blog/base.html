@@ -40,9 +40,9 @@
                     {% else %}
                     <a href="login">Zaloguj się</a>
                     <a href="register">Zarejestruj się</a>
-                    <a href="{% url 'password_reset' %}">Resetuj hasło</a>
-                    <a href="{% url 'social:begin' 'facebook' %}">Login with Facebook</a>
+                    <a href="#">Resetuj hasło</a>
                     <a href="{% url 'social:begin' 'github' %}">Login with GitHub</a>
+                    <a href="{% url 'social:begin' 'facebook' %}">Login with Facebook</a>
                     {% endif %}
                 </div>
             </div>

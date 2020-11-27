@@ -40,7 +40,6 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'social_django',
     'blog',
-
 ]
 
 MIDDLEWARE = [
@@ -50,7 +49,7 @@ MIDDLEWARE = [
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
-    'django.middleware.clickjacking.XFrameOptionsMiddleware', 
+    'django.middleware.clickjacking.XFrameOptionsMiddleware',
     'whitenoise.middleware.WhiteNoiseMiddleware',
     'social_django.middleware.SocialAuthExceptionMiddleware',
 ]
@@ -68,8 +67,8 @@ TEMPLATES = [
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
-                'social_django.context_processors.backends',
-                'social_django.context_processors.login_redirect',
+                'social_django.context_processors.backends',  # <--
+                'social_django.context_processors.login_redirect', # <--
             ],
         },
     },
@@ -108,6 +107,14 @@ AUTH_PASSWORD_VALIDATORS = [
 ]
 
 
+AUTHENTICATION_BACKENDS = (
+    'social_core.backends.github.GithubOAuth2',
+    'social_core.backends.facebook.FacebookOAuth2',
+
+    'django.contrib.auth.backends.ModelBackend',
+)
+
+
 # Internationalization
 # https://docs.djangoproject.com/en/2.2/topics/i18n/
 
@@ -125,30 +132,25 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/2.2/howto/static-files/
 
-STATIC_URL = '/static/'
+#BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+
+# Static files (CSS, JavaScript, Images)
+# https://docs.djangoproject.com/en/1.9/howto/static-files/
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+STATIC_URL = '/static/'
+
+# Extra places for collectstatic to find static files.
 STATICFILES_DIRS = (
-    os.path.join(BASE_DIR, "static"),
+    os.path.join(BASE_DIR, 'static'),
 )
-
 django_heroku.settings(locals())
-
-EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
-
-AUTHENTICATION_BACKENDS = (
-    'social_core.backends.facebook.FacebookOAuth2',
-    'social_core.backends.github.GithubOAuth2',
-    
-
-    'django.contrib.auth.backends.ModelBackend',
-)
 
 LOGIN_URL = 'login'
 LOGOUT_URL = 'logout'
 LOGIN_REDIRECT_URL = '/'
 
+SOCIAL_AUTH_GITHUB_KEY = '5d4c7708808565a52f15'
+SOCIAL_AUTH_GITHUB_SECRET = 'c712b86809dc209f68bfa249dc06036f2e1fda71'
+
 SOCIAL_AUTH_FACEBOOK_KEY = '391559382094053'  # App ID
 SOCIAL_AUTH_FACEBOOK_SECRET = '86c853e574dbf4941ba6d339b8e9b61b'  # App Secret
-
-SOCIAL_AUTH_GITHUB_KEY = 'ab7e74b4d63df5303ec9'
-SOCIAL_AUTH_GITHUB_SECRET = 'ce4297dcd460e636e15dce08b9576d8bf115a75d'

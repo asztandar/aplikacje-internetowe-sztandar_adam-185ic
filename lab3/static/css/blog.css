@@ -130,3 +130,10 @@ h1, h2, h3, h4 {
   .change-password-content{
     color:black;
   }
+  
+  input{
+	  color: black;
+  }
+  textarea{
+	  color: black;
+  }
