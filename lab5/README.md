@@ -11,32 +11,35 @@ __import i zmienne globalne__ :
 __uruchomienie programu__:
 ![](md_img/0.2.png)
 
-##przykład: 4-web-scraping-example4.py 
+## przykład: 4-web-scraping-example4.py 
 __4-web-scraping-example4.py__ -
 ![](md_img/1.1.png)
 ![](md_img/1.2.png)
 ![](md_img/1.3.png)
 ![](md_img/1.4.png)
 
-##przykład: 4-web-scraping-example5.py 
+## przykład: 4-web-scraping-example5.py
+
 __4-web-scraping-example5.py__ -
 ![](md_img/2.1.png)
 ![](md_img/2.2.png)
 ![](md_img/2.3.png)
 
-##przykład: 4-web-scraping-example6.py 
+## przykład: 4-web-scraping-example6.py
+
 __4-web-scraping-example6.py__ -
 ![](md_img/2.4.png)
 ![](md_img/2.5.png)
 ![](md_img/2.6.png)
 Obrazek by powinien zostać wyświetlony w domyślnym programie do wyświetlania obrazów.
 
-##przykład: 4-web-scraping-example6lab.py 
+## przykład: 4-web-scraping-example6lab.py
+
 __4-web-scraping-example6lab.py__ -
 ![](md_img/3.1.png)
 ![](md_img/3.2.png)
 
-##przykład: 4-web-scraping-example7.py 
+## przykład: 4-web-scraping-example7.py 
 __4-web-scraping-example7.py__ 
 ![](md_img/4.png)
 
