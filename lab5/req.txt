@@ -1,0 +1,19 @@
+ appdirs
+beautifulsoup4 
+certifi
+chardet
+click
+html5lib
+idna
+lxml
+mypy-extensions
+pathspec
+regex
+requests
+six
+soupsieve
+toml
+typed-ast
+typing-extensions
+urllib3
+webencodings
