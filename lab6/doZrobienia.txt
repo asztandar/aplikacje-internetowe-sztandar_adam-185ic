@@ -1,0 +1,15 @@
+--------to kontynuacja lab. nr 4,
+--------viewsets, 
+--------routers,
+--------uwierzytelnianie (basic, session, token),
+--------do poczytania 📕 📖 świetny artykuł o autoryzacji dla zestawu Django + DRF + React,
+--------do poczytania o zastosowaniu JWT,
+--------należy przeanalizować i wdrożyć kod z repozytorium do zajęć,
+--------plusy za własne przemyślenia, analizę dokumentacji i idące za nimi modyfikacje w projekcie,
+--------plus za implementację prostego licznika wizyt z użyciem cookies (p. 11.5 w linku, ale wstęp też jest przyjemny do analizy),
+--------cookie można ustawić w dowolnym widoku, nie trzeba (ale można) tworzyć nowego widoku w tym celu, tutaj drugi link do przykładu z cookie,
+proponowane modyfikacje to np.
+     -----nowa aplikacja, 
+     -----nowe API (v2), 
+     opcja wyszukiwania, 
+     -----sprawdzenie innych serializerów, widoków, viewsets’ów, router’ów itp.
